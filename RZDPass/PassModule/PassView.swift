@@ -17,11 +17,10 @@ class PassView: UIView {
     }()
     
     override init(frame: CGRect) {
-        super.init(frame: CGRect.zero)
-        
-        backgroundColor = .red
+        super.init(frame: frame)
         
         layer.addSublayer(passShapeLayer)
+        passShapeLayer.frame = bounds
         
         let path = UIBezierPath()
         path.move(to: CGPoint(x: 20, y: 200))
