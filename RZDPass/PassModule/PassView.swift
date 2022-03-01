@@ -15,11 +15,118 @@ class PassView: UIView {
         return layer
     }()
     
+    // MARK: - 2 layer
+    let logoImage: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(systemName: "star")
+        return imageView
+    }()
+    
+    // Аэроэкспресс
+    let logoLabel: UILabel = {
+        let label = UILabel()
+        return label
+    }()
+    
+    // Дата поездки
+    let dateTitle: UILabel = {
+        let label = UILabel()
+        return label
+    }()
+    
+    // дата
+    let dateLabel: UILabel = {
+        let label = UILabel()
+        return label
+    }()
+    
+    // Билет действителен на всех маршрутах
+    let validLabel: UILabel = {
+        let label = UILabel()
+        return label
+    }()
+    
+    let trainImage: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(systemName: "tram.fill")
+        return imageView
+    }()
+    
+    // тариф
+    let rateTitle: UILabel = {
+        let label = UILabel()
+        return label
+    }()
+    
+    // стандарт
+    let rateLabel: UILabel = {
+        let label = UILabel()
+        return label
+    }()
+    
+    // стоимость
+    let costTitle: UILabel = {
+        let label = UILabel()
+        return label
+    }()
+    
+    // значение стоимости
+    let costLabel: UILabel = {
+        let label = UILabel()
+        return label
+    }()
+    
+    // пассажир
+    let passengerTitle: UILabel = {
+        let label = UILabel()
+        return label
+    }()
+    
+    // ФИО
+    let passengerLable: UILabel = {
+        let label = UILabel()
+        return label
+    }()
+    
+    // документ
+    let docTitle: UILabel = {
+        let label = UILabel()
+        return label
+    }()
+    
+    // паспорт
+    let docLable: UILabel = {
+        let label = UILabel()
+        return label
+    }()
+    
+    // документ
+    let passportTitle: UILabel = {
+        let label = UILabel()
+        return label
+    }()
+    
+    // серия номер паспорта
+    let numbersLable: UILabel = {
+        let label = UILabel()
+        return label
+    }()
+    
+    //QR код
+    let qrCode: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(systemName: "tram.fill")
+        return imageView
+    }()
+    
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .darkGray
         
         layer.addSublayer(passShapeLayer)
+        
+        
         passShapeLayer.frame = bounds
         
         let path = UIBezierPath()
