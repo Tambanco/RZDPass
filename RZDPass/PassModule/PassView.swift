@@ -19,7 +19,6 @@ class PassView: UIView {
     let logoImage: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(systemName: "star")
-        imageView.frame = CGRect(x: 30, y: 170, width: 40, height: 40)
         imageView.tintColor = .white
         return imageView
     }()
@@ -27,12 +26,16 @@ class PassView: UIView {
     // Аэроэкспресс
     let logoLabel: UILabel = {
         let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 20)
+        label.text = "Аэроэкспресс"
+        label.textColor = .white
         return label
     }()
     
     // Дата поездки
     let dateTitle: UILabel = {
         let label = UILabel()
+        label.text = "Дата поездки"
         return label
     }()
     
@@ -128,8 +131,19 @@ class PassView: UIView {
         
         addSubview(logoImage)
         logoImage.translatesAutoresizingMaskIntoConstraints = false
+        logoImage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30).isActive = true
+        logoImage.topAnchor.constraint(equalTo: topAnchor, constant: 160).isActive = true
         
+        addSubview(logoLabel)
+        logoLabel.translatesAutoresizingMaskIntoConstraints = false
+        logoLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 60).isActive = true
+        logoLabel.topAnchor.constraint(equalTo: topAnchor, constant: 160).isActive = true
         
+        addSubview(dateTitle)
+        dateTitle.translatesAutoresizingMaskIntoConstraints = false
+//        dateTitle.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 10).isActive = true
+        dateTitle.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 60).isActive = true
+        dateTitle.topAnchor.constraint(equalTo: topAnchor, constant: 160).isActive = true
         
         let path = UIBezierPath()
         path.move(to: CGPoint(x: 10, y: 160))
