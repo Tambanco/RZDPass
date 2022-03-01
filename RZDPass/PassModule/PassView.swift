@@ -42,12 +42,17 @@ class PassView: UIView {
     // дата
     let dateLabel: UILabel = {
         let label = UILabel()
+        label.text = "04.06.17"
+        label.textColor = .white
+        label.font = UIFont.systemFont(ofSize: 25)
         return label
     }()
     
     // Билет действителен на всех маршрутах
     let validLabel: UILabel = {
         let label = UILabel()
+        label.text = "Билет действителен на всех маршрутах"
+        label.font = UIFont.systemFont(ofSize: 15)
         return label
     }()
     
@@ -124,26 +129,38 @@ class PassView: UIView {
         return imageView
     }()
     
+    // MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
+        backgroundColor = .cyan
         
         layer.addSublayer(passShapeLayer)
         
         addSubview(logoImage)
         logoImage.translatesAutoresizingMaskIntoConstraints = false
         logoImage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30).isActive = true
-        logoImage.topAnchor.constraint(equalTo: topAnchor, constant: 160).isActive = true
+        logoImage.topAnchor.constraint(equalTo: topAnchor, constant: 170).isActive = true
         
         addSubview(logoLabel)
         logoLabel.translatesAutoresizingMaskIntoConstraints = false
         logoLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 60).isActive = true
-        logoLabel.topAnchor.constraint(equalTo: topAnchor, constant: 160).isActive = true
+        logoLabel.topAnchor.constraint(equalTo: topAnchor, constant: 170).isActive = true
         
         addSubview(dateTitle)
         dateTitle.translatesAutoresizingMaskIntoConstraints = false
-//        dateTitle.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 10).isActive = true
-        dateTitle.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 60).isActive = true
+        dateTitle.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20).isActive = true
         dateTitle.topAnchor.constraint(equalTo: topAnchor, constant: 160).isActive = true
+        
+        addSubview(dateLabel)
+        dateLabel.translatesAutoresizingMaskIntoConstraints = false
+        dateLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -25).isActive = true
+        dateLabel.topAnchor.constraint(equalTo: dateTitle.bottomAnchor).isActive = true
+        
+        addSubview(validLabel)
+        validLabel.translatesAutoresizingMaskIntoConstraints = false
+        validLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        validLabel.topAnchor.constraint(equalTo: topAnchor, constant: 220).isActive = true
         
         let path = UIBezierPath()
         path.move(to: CGPoint(x: 10, y: 160))
