@@ -123,7 +123,7 @@ class PassView: UIView {
     }()
     
     // паспорт
-    let docLable: UILabel = {
+    let docLabel: UILabel = {
         let label = UILabel()
         label.text = "Паспорт"
         label.font = UIFont.systemFont(ofSize: 20)
@@ -140,7 +140,7 @@ class PassView: UIView {
     }()
     
     // серия номер паспорта
-    let numbersLable: UILabel = {
+    let numbersLabel: UILabel = {
         let label = UILabel()
         label.text = "1234567890"
         label.font = UIFont.systemFont(ofSize: 20)
@@ -228,27 +228,27 @@ class PassView: UIView {
         docTitle.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20).isActive = true
         docTitle.topAnchor.constraint(equalTo: rateLabel.bottomAnchor, constant: 20).isActive = true
         
-        addSubview(docLable)
-        docLable.translatesAutoresizingMaskIntoConstraints = false
-        docLable.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20).isActive = true
-        docLable.topAnchor.constraint(equalTo: docTitle.bottomAnchor).isActive = true
+        addSubview(docLabel)
+        docLabel.translatesAutoresizingMaskIntoConstraints = false
+        docLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20).isActive = true
+        docLabel.topAnchor.constraint(equalTo: docTitle.bottomAnchor).isActive = true
         
         addSubview(passportTitle)
         passportTitle.translatesAutoresizingMaskIntoConstraints = false
         passportTitle.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20).isActive = true
         passportTitle.topAnchor.constraint(equalTo: passengerLable.bottomAnchor, constant: 20).isActive = true
         
-        addSubview(numbersLable)
-        numbersLable.translatesAutoresizingMaskIntoConstraints = false
-        numbersLable.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20).isActive = true
-        numbersLable.topAnchor.constraint(equalTo: passportTitle.bottomAnchor).isActive = true
+        addSubview(numbersLabel)
+        numbersLabel.translatesAutoresizingMaskIntoConstraints = false
+        numbersLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20).isActive = true
+        numbersLabel.topAnchor.constraint(equalTo: passportTitle.bottomAnchor).isActive = true
         
         addSubview(qrCode)
         qrCode.translatesAutoresizingMaskIntoConstraints = false
         qrCode.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        qrCode.topAnchor.constraint(equalTo: numbersLable.bottomAnchor, constant: 50).isActive = true
+        qrCode.topAnchor.constraint(equalTo: numbersLabel.bottomAnchor, constant: 50).isActive = true
         qrCode.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.2).isActive = true
-        qrCode.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.4).isActive = true
+        qrCode.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.45).isActive = true
         
         
         let path = UIBezierPath()
