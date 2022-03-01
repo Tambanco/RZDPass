@@ -59,18 +59,24 @@ class PassView: UIView {
     let trainImage: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(systemName: "tram.fill")
+        imageView.tintColor = .black
         return imageView
     }()
     
     // тариф
     let rateTitle: UILabel = {
         let label = UILabel()
+        label.text = "Тариф"
+        label.font = UIFont.systemFont(ofSize: 15)
         return label
     }()
     
     // стандарт
     let rateLabel: UILabel = {
         let label = UILabel()
+        label.text = "CТАНДАРТ"
+        label.font = UIFont.systemFont(ofSize: 15)
+        label.textColor = .white
         return label
     }()
     
@@ -161,6 +167,21 @@ class PassView: UIView {
         validLabel.translatesAutoresizingMaskIntoConstraints = false
         validLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         validLabel.topAnchor.constraint(equalTo: topAnchor, constant: 220).isActive = true
+        
+        addSubview(trainImage)
+        trainImage.translatesAutoresizingMaskIntoConstraints = false
+        trainImage.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        trainImage.topAnchor.constraint(equalTo: validLabel.bottomAnchor).isActive = true
+        
+        addSubview(rateTitle)
+        rateTitle.translatesAutoresizingMaskIntoConstraints = false
+        rateTitle.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20).isActive = true
+        rateTitle.topAnchor.constraint(equalTo: trainImage.bottomAnchor, constant: 20).isActive = true
+        
+        addSubview(rateLabel)
+        rateLabel.translatesAutoresizingMaskIntoConstraints = false
+        rateLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20).isActive = true
+        rateLabel.topAnchor.constraint(equalTo: (rateTitle).bottomAnchor).isActive = true
         
         let path = UIBezierPath()
         path.move(to: CGPoint(x: 10, y: 160))
