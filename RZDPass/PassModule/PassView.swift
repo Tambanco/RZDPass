@@ -129,11 +129,7 @@ class PassView: UIView {
         addSubview(logoImage)
         logoImage.translatesAutoresizingMaskIntoConstraints = false
         
-        addSubview(logoLabel)
-        logoLabel.translatesAutoresizingMaskIntoConstraints = false
-        logoLabel.leadingAnchor.constraint(equalTo: logoImage.trailingAnchor, constant: 10).isActive = true
-        logoLabel.topAnchor.constraint(equalTo: topAnchor, constant: <#T##CGFloat#>)
-
+        
         
         let path = UIBezierPath()
         path.move(to: CGPoint(x: 10, y: 160))
