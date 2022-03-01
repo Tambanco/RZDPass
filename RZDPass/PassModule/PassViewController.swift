@@ -18,6 +18,7 @@ class PassViewController: UIViewController {
     
     func passViewBuilder() {
         passView = PassView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height))
+        passView = PassView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
         view.addSubview(passView)
     }
 }
