@@ -19,6 +19,8 @@ class PassView: UIView {
     let logoImage: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(systemName: "star")
+        imageView.frame = CGRect(x: 30, y: 170, width: 40, height: 40)
+        imageView.tintColor = .white
         return imageView
     }()
     
@@ -119,15 +121,19 @@ class PassView: UIView {
         return imageView
     }()
     
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .darkGray
         
         layer.addSublayer(passShapeLayer)
         
+        addSubview(logoImage)
+        logoImage.translatesAutoresizingMaskIntoConstraints = false
         
-        passShapeLayer.frame = bounds
+        addSubview(logoLabel)
+        logoLabel.translatesAutoresizingMaskIntoConstraints = false
+        logoLabel.leadingAnchor.constraint(equalTo: logoImage.trailingAnchor, constant: 10).isActive = true
+        logoLabel.topAnchor.constraint(equalTo: topAnchor, constant: <#T##CGFloat#>)
+
         
         let path = UIBezierPath()
         path.move(to: CGPoint(x: 10, y: 160))
@@ -145,6 +151,7 @@ class PassView: UIView {
         
         passShapeLayer.path = path.cgPath
         passShapeLayer.fillColor = UIColor(rgb: 0x75140D).cgColor
+        passShapeLayer.frame = bounds
         
     }
     
