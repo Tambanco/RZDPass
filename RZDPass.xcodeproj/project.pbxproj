@@ -13,8 +13,8 @@
 		494F0CE627CE164700326116 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 494F0CE427CE164700326116 /* Main.storyboard */; };
 		494F0CE827CE164800326116 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 494F0CE727CE164800326116 /* Assets.xcassets */; };
 		494F0CEB27CE164800326116 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 494F0CE927CE164800326116 /* LaunchScreen.storyboard */; };
-		494F0CF327CE16BA00326116 /* PassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494F0CF227CE16BA00326116 /* PassViewController.swift */; };
 		494F0CF527CE16C100326116 /* PassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494F0CF427CE16C100326116 /* PassView.swift */; };
+		494F0CF827CE170000326116 /* PassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494F0CF727CE170000326116 /* PassViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,8 +26,8 @@
 		494F0CE727CE164800326116 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		494F0CEA27CE164800326116 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		494F0CEC27CE164800326116 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		494F0CF227CE16BA00326116 /* PassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassViewController.swift; sourceTree = "<group>"; };
 		494F0CF427CE16C100326116 /* PassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassView.swift; sourceTree = "<group>"; };
+		494F0CF727CE170000326116 /* PassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +75,7 @@
 		494F0CF627CE16C700326116 /* PassModule */ = {
 			isa = PBXGroup;
 			children = (
-				494F0CF227CE16BA00326116 /* PassViewController.swift */,
+				494F0CF727CE170000326116 /* PassViewController.swift */,
 				494F0CF427CE16C100326116 /* PassView.swift */,
 			);
 			path = PassModule;
@@ -154,8 +154,8 @@
 			files = (
 				494F0CF527CE16C100326116 /* PassView.swift in Sources */,
 				494F0CE327CE164700326116 /* ViewController.swift in Sources */,
-				494F0CF327CE16BA00326116 /* PassViewController.swift in Sources */,
 				494F0CDF27CE164700326116 /* AppDelegate.swift in Sources */,
+				494F0CF827CE170000326116 /* PassViewController.swift in Sources */,
 				494F0CE127CE164700326116 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,6 +7,11 @@
 
 import UIKit
 
-class PassViewController: UIView {
+class PassViewController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+    }
 
 }
