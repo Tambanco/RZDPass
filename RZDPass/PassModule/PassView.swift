@@ -8,7 +8,6 @@
 import UIKit
 
 class PassView: UIView {
-
     // MARK: - 1 layer
     let passShapeLayer: CAShapeLayer = {
         let layer = CAShapeLayer()
@@ -18,7 +17,8 @@ class PassView: UIView {
     // MARK: - 2 layer
     let logoImage: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(systemName: "star")
+        let largeConfig = UIImage.SymbolConfiguration(pointSize: 22)
+        imageView.image = UIImage(systemName: "star", withConfiguration: largeConfig)
         imageView.tintColor = .white
         return imageView
     }()
@@ -58,7 +58,8 @@ class PassView: UIView {
     
     let trainImage: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(systemName: "tram.fill")
+        let largeConfig = UIImage.SymbolConfiguration(pointSize: 30)
+        imageView.image = UIImage(systemName: "tram.fill", withConfiguration: largeConfig)
         imageView.tintColor = .black
         return imageView
     }()
@@ -142,7 +143,7 @@ class PassView: UIView {
     // серия номер паспорта
     let numbersLabel: UILabel = {
         let label = UILabel()
-        label.text = "1234567890"
+        label.text = "0123456789".masked
         label.font = UIFont.systemFont(ofSize: 20)
         label.textColor = .white
         return label
@@ -246,7 +247,7 @@ class PassView: UIView {
         addSubview(qrCode)
         qrCode.translatesAutoresizingMaskIntoConstraints = false
         qrCode.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        qrCode.topAnchor.constraint(equalTo: numbersLabel.bottomAnchor, constant: 50).isActive = true
+        qrCode.topAnchor.constraint(equalTo: numbersLabel.bottomAnchor, constant: 40).isActive = true
         qrCode.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.2).isActive = true
         qrCode.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.45).isActive = true
         
@@ -268,7 +269,6 @@ class PassView: UIView {
         passShapeLayer.path = path.cgPath
         passShapeLayer.fillColor = UIColor(rgb: 0x75140D).cgColor
         passShapeLayer.frame = bounds
-        
     }
     
     required init?(coder: NSCoder) {

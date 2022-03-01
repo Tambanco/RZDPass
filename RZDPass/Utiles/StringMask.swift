@@ -8,6 +8,6 @@
 import Foundation
 extension StringProtocol {
     var masked: String {
-        return String(repeating: "*", count: Swift.max(0, count-3)) + suffix(3)
+        return String(repeating: "*", count: Swift.max(0, count-4)) + suffix(4)
     }
 }
