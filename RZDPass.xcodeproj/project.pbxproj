@@ -9,25 +9,23 @@
 /* Begin PBXBuildFile section */
 		494F0CDF27CE164700326116 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494F0CDE27CE164700326116 /* AppDelegate.swift */; };
 		494F0CE127CE164700326116 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494F0CE027CE164700326116 /* SceneDelegate.swift */; };
-		494F0CE327CE164700326116 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494F0CE227CE164700326116 /* ViewController.swift */; };
-		494F0CE627CE164700326116 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 494F0CE427CE164700326116 /* Main.storyboard */; };
 		494F0CE827CE164800326116 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 494F0CE727CE164800326116 /* Assets.xcassets */; };
 		494F0CEB27CE164800326116 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 494F0CE927CE164800326116 /* LaunchScreen.storyboard */; };
 		494F0CF527CE16C100326116 /* PassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494F0CF427CE16C100326116 /* PassView.swift */; };
 		494F0CF827CE170000326116 /* PassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494F0CF727CE170000326116 /* PassViewController.swift */; };
+		494F0CFA27CE18E000326116 /* UIColorHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494F0CF927CE18E000326116 /* UIColorHex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		494F0CDB27CE164700326116 /* RZDPass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RZDPass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		494F0CDE27CE164700326116 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		494F0CE027CE164700326116 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		494F0CE227CE164700326116 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		494F0CE527CE164700326116 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		494F0CE727CE164800326116 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		494F0CEA27CE164800326116 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		494F0CEC27CE164800326116 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		494F0CF427CE16C100326116 /* PassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassView.swift; sourceTree = "<group>"; };
 		494F0CF727CE170000326116 /* PassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassViewController.swift; sourceTree = "<group>"; };
+		494F0CF927CE18E000326116 /* UIColorHex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorHex.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,9 +60,8 @@
 			children = (
 				494F0CDE27CE164700326116 /* AppDelegate.swift */,
 				494F0CE027CE164700326116 /* SceneDelegate.swift */,
-				494F0CE227CE164700326116 /* ViewController.swift */,
 				494F0CF627CE16C700326116 /* PassModule */,
-				494F0CE427CE164700326116 /* Main.storyboard */,
+				494F0CFB27CE194200326116 /* Utiles */,
 				494F0CE727CE164800326116 /* Assets.xcassets */,
 				494F0CE927CE164800326116 /* LaunchScreen.storyboard */,
 				494F0CEC27CE164800326116 /* Info.plist */,
@@ -79,6 +76,14 @@
 				494F0CF427CE16C100326116 /* PassView.swift */,
 			);
 			path = PassModule;
+			sourceTree = "<group>";
+		};
+		494F0CFB27CE194200326116 /* Utiles */ = {
+			isa = PBXGroup;
+			children = (
+				494F0CF927CE18E000326116 /* UIColorHex.swift */,
+			);
+			path = Utiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,7 +146,6 @@
 			files = (
 				494F0CEB27CE164800326116 /* LaunchScreen.storyboard in Resources */,
 				494F0CE827CE164800326116 /* Assets.xcassets in Resources */,
-				494F0CE627CE164700326116 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,8 +157,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				494F0CF527CE16C100326116 /* PassView.swift in Sources */,
-				494F0CE327CE164700326116 /* ViewController.swift in Sources */,
 				494F0CDF27CE164700326116 /* AppDelegate.swift in Sources */,
+				494F0CFA27CE18E000326116 /* UIColorHex.swift in Sources */,
 				494F0CF827CE170000326116 /* PassViewController.swift in Sources */,
 				494F0CE127CE164700326116 /* SceneDelegate.swift in Sources */,
 			);
@@ -163,14 +167,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		494F0CE427CE164700326116 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				494F0CE527CE164700326116 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		494F0CE927CE164800326116 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -310,7 +306,6 @@
 				INFOPLIST_FILE = RZDPass/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -338,7 +333,6 @@
 				INFOPLIST_FILE = RZDPass/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
