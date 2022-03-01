@@ -35,7 +35,7 @@ class PassView: UIView {
         path.addArc(withCenter: CGPoint(x: 20, y: 600), radius: 10, startAngle: Double.pi/2, endAngle: Double.pi, clockwise: true)
         path.addLine(to: CGPoint(x: 10, y: 270))
         path.addArc(withCenter: CGPoint(x: 10, y: 260), radius: 5, startAngle: Double.pi/2, endAngle: (Double.pi*3)/2, clockwise: false)
-            
+        
         passShapeLayer.path = path.cgPath
         passShapeLayer.fillColor = UIColor(rgb: 0x75140D).cgColor
         
